@@ -21,52 +21,22 @@
         background-repeat: no-repeat;
         background-size: cover;
       }
+      .left-trois p{
+margin-left: 10px;
+      }
 
       </style>
       <form class="container mt-1 " style="background-color:#f8fdfd; width:1600px;" >
-        <div style="background-color: #51bfd0; height: 80px;padding-top: 5px; width: 1141px; margin: 0px -25px 0px -15px; display: flex;align-items: center;">
-        <p style="color: #f8fdfd; margin: 10px 118px 0px 407px ; font-size: 28px;"> Créer et Paramétrer vos Quizz </p>
-        <button type="submit" class="btn col-2 ml-5 pt-2" style=" width:200px; background-color:#3addd6 ; color: #f8fdfd;margin: 10px 7px 0px 0px" >Deconnexion</button>
-        </div>
+        
         <div class="containterbottom" style="display: flex;flex-direction: row;">
-        <div class="container left" style="width: 400px; height: 450px;border-radius: 10px; border: solid #818181 1px;margin: 55px 30px 0px -12px;">
-           <div style="height: 150px;background-color:#3addd6 ;width: 398px;margin: 0px 7px 0px -15px ;padding-left: 20px;padding-top: 7px;border-radius: 10px;">
-            <div class="rounded-circle"  style="width: 120px; height: 120px;border: solid #818181 2px;">
-
-            <div class="left-deux" style="margin: 9px 0px 0px 8px;">
-                <img src="avatar.png" class="rounded-circle" style="border:solid white 1px ;height: 100px; width: 100px; ;">
-                <h4 style="margin: -65px 0px 0px 134px"> AAA         BBB </h4>
-            </div>
-        </div>
-           </div>
-           <div class="left-trois" style="margin: 13px 0px 0px -3px;">
-            <div style="height: 60px; width: auto; border: solid white 3px;">
-            <p style="font-size: 22px;">Liste Questions</p>
-            <img src="ic-liste.png" style=" margin: -90px -18px -26px 323px;height: 25px;width: 25px;">
-            </div>
-            <div style="height: 60px; width: auto; border: solid white 3px; display: flex; flex-direction: column;">
-                <div style="width: 2px;height: 60px;background-color:green ; "></div>
-                <p style="font-size: 22px;margin-top: -50px;">Créer Admin</p>
-                <img src="ic-ajout-active.png" style=" margin: -43px -18px -26px 323px;height: 25px;width: 25px;">
-            </div>
-            <div style="height: 60px; width: auto; border: solid white 3px;">
-
-                <p style="font-size: 22px;">Liste Joueurs</p>
-                <img src="ic-liste.png" style=" margin: -90px -18px -26px 323px;height: 25px;width: 25px;">
-            </div>
-            <div style="height:60px; width:auto; border: solid white 3px;">
-                <p style="font-size: 22px;">Créer Questions</p>
-                <img src="ic-ajout.png" style=" margin: -90px -18px -26px 323px;height: 25px;width: 25px;">
-            </div>
-           </div>
-        </div>
+       
         <div class="container right" style="width: 700px; height:auto;border-radius: 10px; border: solid #818181 1px; display:flex;flex-direction:row;margin-top:21px">
         <div class="right-one">
              
         
             <form class="container mt-5 " style="background-color:#f8fdfd; width:600px;" >
                 <h3>S'inscrire</h3>
-                <p>Pour proposer des quizz</p>
+                <p>Pour tester votre niveau de culture géneral</p>
                 <div class="form-group ">
                   <label>Prénom</label>
                   <input type="email" class="form-control  ml-2 pt-2 " style="height: 50px; width:450px" placeholder="Jooo" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -95,7 +65,8 @@
                     Avatar
                   </a>
                 <button type="submit" class="btn col-6 ml-2 pt-2" style=" width:180px; background-color:#3addd6 ;margin: 0px 14px 0px 8px ;color: #f8fdfd;" >Choisir un fichier</button>
-                <button type="submit" class="btn col-4 pt-2" style=" width:200px; background-color:#3addd6 ; margin: 0px 233px 0px 82px;color: #f8fdfd;" >Créer compte</button>
+                
+                <a name="creer" type="submit"  class="btn col-4 pt-2" href="connection.html" style=" width:200px; background-color:#3addd6 ; margin: 0px 233px 0px 82px;color: #f8fdfd;" role="button">Créer compte</a>
               </form>
         </div>
         <div class="right-deux">

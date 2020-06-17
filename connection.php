@@ -1,3 +1,34 @@
+<?php 
+require_once("Validator.php")
+ $Validator= new Validator ();
+ $login="";
+ $pwd="";
+ $lien="#";
+ $error=[];
+ if(isset($_POST['btn-submit'])) {
+   $login=$_POST['login'];
+   $pwd=$_POST['pwd'];
+  $Validator-> isVide($login,'login') ;
+  $Validator-> isVide($pwd,'pwd') ;
+  if($Validator -> isValid()){
+    $lien="interface joueur.php";
+    
+  }else{
+    $error=$Validator -> getErrors();
+  }
+
+ 
+ }
+ if (isset($error['login']){
+   $login="";
+
+ }
+ if (isset($error['pwd']){
+  $pwd="";
+
+}
+ 
+ ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -23,23 +54,28 @@
       }
 
       </style>
-      <form class="container mt-5 " style="background-color:#f8fdfd; width:600px;" >
+      <form method="post" class="container mt-5 " style="background-color:#f8fdfd; width:600px; "action="<?php echo $lien ?>" >
         <div style="background-color: #51bfd0; height: 60px;padding-top: 5px; width: 600px; margin: 0px 0px 40px -15px;">
         <p style="color: #f8fdfd; margin: 10px 0px ; font-size: 22px;"> Login Form </p>
         </div>
         <div class="form-group ">
           
-          <input type="email" class="form-control  ml-2 pt-2 " style="height: 70px; width:500px" placeholder="Login" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <input  type="text" class="form-control  ml-2 pt-2 " style="height: 70px; width:500px" name="login"  value="<?= $login?>" placeholder="Login" >
+          <?php  if( isset( $error ['login'])){?>
+          <div class="alert alert-primary" role="alert">
+            <strong><?php echo $error ['login']?></strong>
+          </div>
+          <?php } ?>
           <img src="login.png" style="height:40px; margin: -90px 0px 0px 450px;"> 
         </div>
         <div class="form-group ">
           
-          <input type="password" class="form-control  ml-2 pt-2" style="height: 70px; width:500px" placeholder="Passwrd"  id="exampleInputPassword1">
+          <input type="password" class="form-control  ml-2 pt-2" style="height: 70px; width:500px" name="pwd" value="" placeholder="Passwrd"  id="exampleInputPassword1">
           <img src="passwrd.png"  style="height:40px;margin: -90px 0px 0px 450px;"> 
         </div>
         
-        <button type="submit" class="btn col-6 ml-2 pt-2" style=" width:200px; background-color:#3addd6 ;margin-right: 50px;margin-bottom: 20px; color: #f8fdfd;" >Connexion</button>
-        <a>
+        <button type="submit" class="btn col-6 ml-2 pt-2" name="btn-submit" style=" width:200px; background-color:#3addd6 ;margin-right: 50px;margin-bottom: 20px; color: #f8fdfd;" >Connexion</button>
+        <a href="creer user.html">
           S'inscrire pour jouer?
         </a>
       </form>
